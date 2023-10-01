@@ -1,0 +1,5 @@
+1º - Configura cli aws , acess key para a conta com comando configure aws 
+2º - Consulte a documentação para extrair base para criar sua infra
+3º - crie um par de chave ssh, para conexão 
+4º - faça o download da sua chave coloque na mesma pagina do projeto e ou caminho da chave, abra um variave com o nome: "key_name= nome da chave ", de os devidos comando para 
+garantir a segurança da chave conforme indicado na pagina do provider, e tente a conexão ssh.
