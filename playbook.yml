@@ -1,0 +1,8 @@
+- hosts: terraform-ansible
+  tasks:
+    - name: criado arquivo
+      copy:
+        dest: /home/ubuntu/index.html
+        content: <h1>Criado com terraform-ansible</h1>
+    - name: criando servidor
+      shell: "nohup busybox hhtpd -f -p 8080 &"

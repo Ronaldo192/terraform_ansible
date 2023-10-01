@@ -4,7 +4,7 @@
 4º - faça o download da sua chave coloque na mesma pagina do projeto e ou caminho da chave, abra um variave com o nome: "key_name= nome da chave ", de os devidos comando para 
 garantir a segurança da chave conforme indicado na pagina do provider, e tente a conexão ssh.
 
-5º - Para inserir comando de configuração abra um variavel, insira comando em sequencia de execução :
+5º - Para inserir comando de configuração abra um variavel, insira comando em sequencia de execução, iso pode ser feito com ansible conform passo 6:
  user_data = <<-EOF
  {Insira seus comando aqui Ex: 
                 cd /home/ubuntu
@@ -12,3 +12,8 @@ garantir a segurança da chave conforme indicado na pagina do provider, e tente 
                 nohup busybox httpd
                 }
                 EOF
+6º para usar o ansible remova as linha EOF, e crie dois aquivos playbook.yml e hosts.yml
+    hosts - precica do nome da linha host que esta no playbook e o ip da vm 
+    playbook - pode ser consultado os ex. na documentação "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_intro.html"
+7º para executar:
+    ansible-playbook playbook.yml(arq. playbook)  -u ubuntu(qual usuario executara) --private-key(chave ssh) iac-treinamento.pem -i hosts.yml (qual vm sera executado a config)
