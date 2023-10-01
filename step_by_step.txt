@@ -3,3 +3,12 @@
 3º - crie um par de chave ssh, para conexão 
 4º - faça o download da sua chave coloque na mesma pagina do projeto e ou caminho da chave, abra um variave com o nome: "key_name= nome da chave ", de os devidos comando para 
 garantir a segurança da chave conforme indicado na pagina do provider, e tente a conexão ssh.
+
+5º - Para inserir comando de configuração abra um variavel, insira comando em sequencia de execução :
+ user_data = <<-EOF
+ {Insira seus comando aqui Ex: 
+                cd /home/ubuntu
+                echo "<h1>Mensagem a ser mostrada</h1>" > index.html
+                nohup busybox httpd
+                }
+                EOF
