@@ -20,6 +20,6 @@ resource "aws_instance" "app_server" {
                 
               
   tags = {
-    Name = "teste-serv"
+    Name = "mv-py-django"
   }
 }
